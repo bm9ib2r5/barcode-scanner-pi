@@ -1,0 +1,21 @@
+[Unit]
+Description=barcodescanner-pi
+After=network-online.target lightdm.service
+Wants=graphical.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pi/barcodescanner-pi
+Environment=DISPLAY=:0.0
+ExecStart=/usr/bin/python /home/pi/barcodescanner-pi/barcodescanner-pi.py
+User=pi
+Group=pi
+Restart=always
+RestartSec=30
+StandardOutput=journal
+StandardError=journal
+LimitNOFILE=32768
+KillMode=mixed
+
+[Install]
+WantedBy=multi-user.target

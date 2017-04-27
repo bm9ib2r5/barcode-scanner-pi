@@ -1,0 +1,8 @@
+/home/pi/barcodescanner-pi/barcodescanner.log {
+    daily
+    rotate 7
+    missingok
+    dateext
+    copytruncate
+    compress
+}

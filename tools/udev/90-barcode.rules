@@ -1,0 +1,1 @@
+SUBSYSTEM=="input", ATTRS{idVendor}=="05e0", ATTRS{idProduct}=="1200", SYMLINK+="barcode0"
